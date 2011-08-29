@@ -1,4 +1,14 @@
 Edge::Application.routes.draw do
+  get "pages/index"
+
+  get "pages/watches_and_clocks"
+
+  get "pages/specimens"
+
+  get "pages/about"
+
+  get "pages/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
