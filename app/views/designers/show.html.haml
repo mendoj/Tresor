@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @designer.first_name
+%p
+  %b Last name:
+  = @designer.last_name
+%p
+  %b Bio:
+  = @designer.bio
+
+= link_to 'Edit', edit_designer_path(@designer)
+\|
+= link_to 'Back', designers_path

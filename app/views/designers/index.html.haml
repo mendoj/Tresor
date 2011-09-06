@@ -1,0 +1,23 @@
+%h1 Listing designers
+
+%table
+  %tr
+    %th First name
+    %th Last name
+    %th Bio
+    %th
+    %th
+    %th
+
+  - @designers.each do |designer|
+    %tr
+      %td= designer.first_name
+      %td= designer.last_name
+      %td= designer.bio
+      %td= link_to 'Show', designer
+      %td= link_to 'Edit', edit_designer_path(designer)
+      %td= link_to 'Destroy', designer, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Designer', new_designer_path

@@ -1,4 +1,6 @@
 Edge::Application.routes.draw do
+  resources :designers
+
   resources :contents
 
   get "pages/index"
