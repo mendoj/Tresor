@@ -6,30 +6,18 @@
 .span-24.last
   .span-1 &nbsp;
   .span-7
-    - page = Content.find_by_context("front_left")
-    %h2.section_title= page.title
-    %p= page.body
+    - index_left = Content.find_by_context("index_left")
+    - if index_left
+      %h2.section_title= index_left.title
+      %p= index_left.body
   .span-8
-    %h2.section_title Shoreditch Master Cleanse
-    %p Portland vegan hoodie, butcher leggings single-origin coffee shoreditch wes anderson photo booth food truck. Scenester synth master cleanse tofu vegan put a bird on it. Artisan biodiesel blog, sustainable aesthetic yr salvia iphone. Cosby sweater tattooed high life, vegan raw denim dreamcatcher farm-to-table banksy cred VHS trust fund 8-bit. Echo park twee tattooed tumblr shoreditch cosby sweater. Banh mi high life raw denim, hoodie shoreditch master cleanse photo booth williamsburg freegan fap trust fund bicycle rights whatever. American apparel brooklyn wes anderson messenger bag, art party gentrify beard.
+    - index_middle = Content.find_by_context("index_middle")
+    - if index_middle
+      %h2.section_title= index_middle.title
+      %p= index_middle.body
   .span-7
-    %h2.section_title Mustache Hoodie
-    %p.stylize Food truck helvetica before they sold out scenester, beard tofu etsy gentrify fixie quinoa next level trust fund PBR high life farm-to-table. Brunch beard messenger bag, vegan organic before they sold out jean shorts cosby sweater four loko seitan cliche DIY aesthetic you probably haven't heard of them. Cardigan squid vegan, terry richardson american apparel organic brunch keffiyeh dreamcatcher freegan seitan yr. Locavore pitchfork wolf, dreamcatcher craft beer mlkshk aesthetic. 
-  .span-1.last &nbsp;
-
-
-%br
-%br
-
-.span-24.last
-  .span-1 &nbsp;
-  .span-14
-    %h2 "High on some real hippy shit"
-    .image= image_tag "/assets/two_col.png"
-    %br
-    %p Cardigan squid vegan, terry richardson american apparel organic brunch keffiyeh dreamcatcher freegan seitan yr. Locavore pitchfork wolf, dreamcatcher craft beer mlkshk aesthetic. Readymade mustache hoodie, locavore single-origin coffee viral trust fund irony mcsweeney's. Sartorial high life seitan ethical skateboard, craft beer leggings beard organic DIY retro.
-  .span-1 &nbsp;
-  .span-7
-    %h2 Organic brunch locavore jean shorts.
-    %p Brunch beard messenger bag, vegan organic before they sold out jean shorts cosby sweater four loko seitan cliche DIY aesthetic you probably haven't heard of them. Cardigan squid vegan, terry richardson american apparel organic brunch keffiyeh dreamcatcher freegan seitan yr. Locavore pitchfork wolf, dreamcatcher craft beer mlkshk aesthetic. Readymade mustache hoodie, locavore single-origin coffee viral trust fund irony mcsweeney's. Sartorial high life seitan ethical skateboard, craft beer leggings beard organic DIY retro. Vinyl craft beer etsy mlkshk, pitchfork cardigan photo booth Austin mcsweeney's sartorial.Cardigan squid vegan, terry richardson american apparel organic brunch keffiyeh dreamcatcher freegan seitan yr. Locavore pitchfork wolf, dreamcatcher craft beer mlkshk aesthetic. Readymade mustache hoodie, locavore single-origin coffee viral trust fund irony mcsweeney's. Sartorial high life seitan ethical skateboard, craft beer leggings beard organic DIY retro.
+    - index_right = Content.find_by_context("index_right")
+    - if index_right
+      %h2.section_title= index_right.title
+      %p= index_right.body
   .span-1.last &nbsp;

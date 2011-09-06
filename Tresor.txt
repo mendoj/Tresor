@@ -14,7 +14,8 @@ Navigation:
   
   Designers
     CMS should be able to add designers, and have gallery items
-      Name, Text, Upload images and descriptions of each piece bio
+      Name, Text, Upload images and descriptions of each piece 
+      Designer bio
       Similar lightbox gallery to jewelry
     
     Tiffany clone, blow up moused-over image with desc.
@@ -40,9 +41,6 @@ Navigation:
 CMS with Login-logout, inventory (spree), may never switch. (HAML)
 Gallery similar to Tiffanies.
 
-Backend, Admin:
-
-
 ----
 
 More golden logo; match sign
@@ -51,4 +49,17 @@ single 3-col spread CMS on FP
 
 Address in lower braces, short detail.  CMS, maybe photograph.
 Hover on menu should be golden to match logo
+
+----
+
+Tech Specs: 
+
+Designer:
+  first_name
+  last_name
+  bio
   
+  has_many :works
+    title
+    desc
+    image:paperclip
