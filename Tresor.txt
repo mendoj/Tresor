@@ -1,0 +1,54 @@
+White look like tiffanies, top menu in similar style
+Get logo script from Jeremy 
+Couple different colors, Gold logo for Tresor
+
+Navigation:
+  Jewelry
+    Estate
+    Necklace
+    Pendant
+    Rings
+    Earrings
+    Bracelets
+    Broaches
+  
+  Designers
+    CMS should be able to add designers, and have gallery items
+      Name, Text, Upload images and descriptions of each piece bio
+      Similar lightbox gallery to jewelry
+    
+    Tiffany clone, blow up moused-over image with desc.
+    
+  Watches and Clocks
+  
+  Objects of Art
+  
+  Specimens
+  
+  News
+  
+  About Us
+  
+  Contact Us
+    Contact Form
+    Mailing List
+    Fax, Phone
+    NO MAP
+    
+** Baxter Moerman - Models, large container images with text, CMS
+
+CMS with Login-logout, inventory (spree), may never switch. (HAML)
+Gallery similar to Tiffanies.
+
+Backend, Admin:
+
+
+----
+
+More golden logo; match sign
+remove filler text from front page
+single 3-col spread CMS on FP
+
+Address in lower braces, short detail.  CMS, maybe photograph.
+Hover on menu should be golden to match logo
+  

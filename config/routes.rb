@@ -1,4 +1,6 @@
 Edge::Application.routes.draw do
+  resources :contents
+
   get "pages/index"
 
   get "pages/watches_and_clocks"
