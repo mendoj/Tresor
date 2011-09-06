@@ -1,0 +1,21 @@
+= form_for @work, :html => { :multipart => true } do |f|
+  -if @work.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@work.errors.count, "error")} prohibited this work from being saved:"
+      %ul
+        - @work.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :designer
+    = f.text_field :designer
+  .field
+    = f.label :text
+    = f.text_field :text
+  .field
+    = f.label :desc
+    = f.text_area :desc
+  .field
+    = f.file_field :image
+  .actions
+    = f.submit 'Save'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110906194658) do
+ActiveRecord::Schema.define(:version => 20110906195006) do
 
   create_table "contents", :force => true do |t|
     t.string   "title"
@@ -27,5 +27,19 @@ ActiveRecord::Schema.define(:version => 20110906194658) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "works", :force => true do |t|
+    t.integer  "designer_id"
+    t.string   "text"
+    t.text     "desc"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_uploaded_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "works", ["designer_id"], :name => "index_works_on_designer_id"
 
 end

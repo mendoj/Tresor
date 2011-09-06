@@ -1,23 +1,18 @@
-%h1 Listing designers
+.span-2 &nbsp;
+.span-20
+  .stylize.black
+    Our Designers:
+    &nbsp;&nbsp;&nbsp;
+  - for designer in @designers
+    .stylize
+      = designer.first_name + " " + designer.last_name
+      &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  %br
+  %br
+  %hr      
 
-%table
-  %tr
-    %th First name
-    %th Last name
-    %th Bio
-    %th
-    %th
-    %th
-
-  - @designers.each do |designer|
-    %tr
-      %td= designer.first_name
-      %td= designer.last_name
-      %td= designer.bio
-      %td= link_to 'Show', designer
-      %td= link_to 'Edit', edit_designer_path(designer)
-      %td= link_to 'Destroy', designer, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Designer', new_designer_path
+  - for designer in @designers
+    %h1= designer.first_name + " " + designer.last_name
+    %hr
+    
+.span-2.last &nbsp;

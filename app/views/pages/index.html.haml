@@ -4,13 +4,13 @@
 .clear
 
 .span-24.last
-  .span-1 &nbsp;
+  .span-2 &nbsp;
   .span-7
     - index_left = Content.find_by_context("index_left")
     - if index_left
       %h2.section_title= index_left.title
       %p= index_left.body
-  .span-8
+  .span-6
     - index_middle = Content.find_by_context("index_middle")
     - if index_middle
       %h2.section_title= index_middle.title
@@ -20,4 +20,4 @@
     - if index_right
       %h2.section_title= index_right.title
       %p= index_right.body
-  .span-1.last &nbsp;
+  .span-2.last &nbsp;

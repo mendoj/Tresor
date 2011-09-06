@@ -1,4 +1,6 @@
 Edge::Application.routes.draw do
+  resources :works
+
   resources :designers
 
   resources :contents
@@ -11,7 +13,7 @@ Edge::Application.routes.draw do
 
   get "pages/about"
 
-  get "pages/contact"
+  match "contact" => "pages#contact"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

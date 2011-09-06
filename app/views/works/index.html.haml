@@ -1,0 +1,23 @@
+%h1 Listing works
+
+%table
+  %tr
+    %th Designer
+    %th Text
+    %th Desc
+    %th
+    %th
+    %th
+
+  - @works.each do |work|
+    %tr
+      %td= work.designer
+      %td= work.text
+      %td= work.desc
+      %td= link_to 'Show', work
+      %td= link_to 'Edit', edit_work_path(work)
+      %td= link_to 'Destroy', work, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Work', new_work_path

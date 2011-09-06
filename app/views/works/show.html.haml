@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Designer:
+  = @work.designer
+%p
+  %b Text:
+  = @work.text
+%p
+  %b Desc:
+  = @work.desc
+
+= link_to 'Edit', edit_work_path(@work)
+\|
+= link_to 'Back', works_path
