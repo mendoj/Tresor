@@ -1,23 +1,36 @@
-%h1 Listing works
+.span-2  &nbsp;
 
-%table
-  %tr
-    %th Designer
-    %th Text
-    %th Desc
-    %th
-    %th
-    %th
+.span-20
 
-  - @works.each do |work|
+  %h1 Listing works
+
+  %table
     %tr
-      %td= work.designer
-      %td= work.text
-      %td= work.desc
-      %td= link_to 'Show', work
-      %td= link_to 'Edit', edit_work_path(work)
-      %td= link_to 'Destroy', work, :confirm => 'Are you sure?', :method => :delete
+      %th Thumbnail
+      %th Designer
+      %th Title
+      %th Description
+      %th
+      %th
+      %th
 
-%br
+    - @works.each do |work|
+      %tr
+        %td= image_tag work.image.url, :width => "100px;"
+        %td
+          - if work.designer
+            = work.designer.first_name + " " + work.designer.last_name
+          - elsif work.gallery
+            = work.gallery.capitalize
+        %td= work.text
+        %td= work.desc
+        %td= link_to 'View', work
+        %td= link_to 'Edit', edit_work_path(work)
+        %td= link_to 'Destroy', work, :confirm => 'Are you sure?', :method => :delete
 
-= link_to 'New Work', new_work_path
+  %br
+
+  = link_to 'New Work', new_work_path
+
+
+.span-2.last &nbsp;

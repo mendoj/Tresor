@@ -1,2 +1,7 @@
-%h1 Pages#about
-%p Find me in app/views/pages/about.html.haml
+.span-2 &nbsp;
+.span-20
+  .stylize.black.big About Us
+  - content = Content.find_by_context("about_us")
+  %br
+  %p= content.body
+.span-2.last &nbsp;

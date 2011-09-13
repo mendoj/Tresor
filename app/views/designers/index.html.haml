@@ -1,18 +1,39 @@
-.span-2 &nbsp;
-.span-20
-  .stylize.black
-    Our Designers:
-    &nbsp;&nbsp;&nbsp;
-  - for designer in @designers
-    .stylize
-      = designer.first_name + " " + designer.last_name
-      &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  %br
-  %br
-  %hr      
+.designers
+  .span-2 &nbsp;
+  .span-20
+    .stylize.black
+      Designers:
+      &nbsp;&nbsp;&nbsp;
+    - for designer in @designers
+      .stylize
+        = link_to designer.first_name + " " + designer.last_name, "##{designer.id}"
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    .stylize= link_to "New Designer", new_designer_path 
+    %br
+    %br
+    %hr      
 
-  - for designer in @designers
-    %h1= designer.first_name + " " + designer.last_name
-    %hr
+    - for designer in @designers
+      %a{:name => designer.id}
+      .stylize.black.big= designer.first_name + " " + designer.last_name
+      %br
+      .works
+        - for work in designer.works
+          = link_to image_tag(work.image.url, :class => "work_image"), work.image.url, :rel => "prettyPhoto", :title => work.desc
+        - if designer.works.count < 1
+          = image_tag 'jewelry.png', :class => "work_image"
+          = image_tag 'jewelry.png', :class => "work_image"
+          = image_tag 'jewelry.png', :class => "work_image"
+          = image_tag 'jewelry.png', :class => "work_image"
+        %br
+      .stylize
+        = link_to "see More from this designer", designer
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        = link_to "Edit me", edit_designer_path(designer)
+      
+      %br
+      %br
+      %hr
+      %br
     
-.span-2.last &nbsp;
+  .span-2.last &nbsp;

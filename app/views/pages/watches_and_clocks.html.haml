@@ -1,2 +1,22 @@
-%h1 Pages#watches_and_clocks
-%p Find me in app/views/pages/watches_and_clocks.html.haml
+.span-2 &nbsp;
+.span-20
+  
+  - for work in @works
+  
+    .span-10
+      = link_to image_tag(work.image.url, :width => "350px", :style => "border: 1px solid #000;"), work.image.url, :rel => "prettyPhoto", :title => work.desc
+    .span-10.last
+      %strong.stylize.big= work.text
+      - if work.designer
+        .stylize.black.big= work.designer.first_name + " " + work.designer.last_name
+      - else
+        .stylize.black.big tr&Eacute;sor
+      %br
+      %p= work.desc
+      %br
+      .stylize= link_to "Request more information", contact_path
+    .clear
+    %br
+  
+.span-2.last &nbsp;
+

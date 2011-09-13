@@ -1,0 +1,34 @@
+.span-2 &nbsp;
+.span-10
+  .stylize.black.big Contact Us:
+  = render 'form'
+.span-10
+  %br
+  %br
+  .stylize.big
+    We can also be contacted by:
+    %br
+  .stylize
+    Telephone:
+  .stylize.black
+    (805) 555- 1011
+  %br
+  .stylize
+    Fax:
+  .stylize.black
+    (805) 555- 1011
+  
+  %br
+  %br
+  %br
+  %br
+  .stylize.black.big
+    Join our mailing list:
+    %br
+  = form_for @fan do |f|
+    = f.text_field :email, :style => "width: 300px; font-size: 1.5em"
+    %br
+    = f.submit "Join"
+    
+
+.span-2.last &nbsp;

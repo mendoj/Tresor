@@ -42,14 +42,13 @@ class WorksController < ApplicationController
   def create
     @work = Work.new(params[:work])
 
-    respond_to do |format|
-      if @work.save
-        format.html { redirect_to @work, notice: 'Work was successfully created.' }
-        format.json { render json: @work, status: :created, location: @work }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @work.errors, status: :unprocessable_entity }
+    if @work.save
+      if @work.designer
+        redirect_to @work.designer
+      elsif @work
+        redirect_to @work
       end
+
     end
   end
 

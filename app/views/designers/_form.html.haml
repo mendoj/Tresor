@@ -7,13 +7,17 @@
           %li= msg
 
   .field
-    = f.label :first_name
+
+    = f.label "First Name:"
+    %br
     = f.text_field :first_name
   .field
-    = f.label :last_name
+    = f.label "Last Name:"
+    %br
     = f.text_field :last_name
   .field
-    = f.label :bio
+    = f.label "Biography"
+    %br
     = f.text_area :bio
   .actions
     = f.submit 'Save'

@@ -1,7 +1,3 @@
-White look like tiffanies, top menu in similar style
-Get logo script from Jeremy 
-Couple different colors, Gold logo for Tresor
-
 Navigation:
   Jewelry
     Estate
@@ -38,9 +34,6 @@ Navigation:
     
 ** Baxter Moerman - Models, large container images with text, CMS
 
-CMS with Login-logout, inventory (spree), may never switch. (HAML)
-Gallery similar to Tiffanies.
-
 ----
 
 More golden logo; match sign
@@ -50,16 +43,12 @@ single 3-col spread CMS on FP
 Address in lower braces, short detail.  CMS, maybe photograph.
 Hover on menu should be golden to match logo
 
-----
-
-Tech Specs: 
-
-Designer:
-  first_name
-  last_name
-  bio
-  
-  has_many :works
-    title
-    desc
-    image:paperclip
+    
+    
+---- 9/7/11
+  Premiere members list
+  Add people from mailing list and input.
+  Designers separate from all other work types
+  Can add all content (except designer) types from admin
+  News Feed
+  Make .stylize font-size larger, including topmenu

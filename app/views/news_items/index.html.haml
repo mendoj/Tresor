@@ -1,0 +1,14 @@
+.span-2 &nbsp;
+.span-20
+  - @news_items.each do |news_item|
+    .stylize.black.big= news_item.title
+    %br
+    .stylize.black= news_item.created_at.to_s(:pretty)
+    %p= news_item.body
+    .stylize= link_to "Edit Me", edit_news_item_path(news_item)
+    %br
+    %br
+  %br
+  .stylize= link_to 'New News item', new_news_item_path
+  %br
+.span-2.last &nbsp;

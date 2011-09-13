@@ -1,23 +1,28 @@
-%h1 Listing contents
+.span-2 &nbsp;
+.span-20
 
-%table
-  %tr
-    %th Title
-    %th Body
-    %th Context
-    %th
-    %th
-    %th
+  %h1 CMS:
 
-  - @contents.each do |content|
+  %table
     %tr
-      %td= content.title
-      %td= content.body
-      %td= content.context
-      %td= link_to 'Show', content
-      %td= link_to 'Edit', edit_content_path(content)
-      %td= link_to 'Destroy', content, :confirm => 'Are you sure?', :method => :delete
+      %th Title
+      %th Body
+      %th Context
+      %th
+      %th
+      %th
 
-%br
+    - @contents.each do |content|
+      %tr
+        %td= content.title
+        %td= content.body
+        %td= content.context
+        %td= link_to 'Show', content
+        %td= link_to 'Edit', edit_content_path(content)
+        %td= link_to 'Destroy', content, :confirm => 'Are you sure?', :method => :delete
 
-= link_to 'New Content', new_content_path
+  %br
+
+  = link_to 'New CMS Item', new_content_path
+
+.span-2.last &nbsp;

@@ -1,15 +1,18 @@
-%p#notice= notice
+.span-2 &nbsp;
+.span-20
+  - if @work.designer
+    .stylize.black.big
+      = @work.designer.first_name + " " + @work.designer.last_name
+  %p
+    %b Title:
+    = @work.text
+  %p
+    %b Desc:
+    = @work.desc
+  %p= image_tag @work.image.url, :width => "790px"
 
-%p
-  %b Designer:
-  = @work.designer
-%p
-  %b Text:
-  = @work.text
-%p
-  %b Desc:
-  = @work.desc
+  = link_to 'Edit', edit_work_path(@work)
+  \|
+  = link_to 'Back', works_path
 
-= link_to 'Edit', edit_work_path(@work)
-\|
-= link_to 'Back', works_path
+.span-2.last &nbsp;

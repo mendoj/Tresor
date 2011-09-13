@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @fan.name
+%p
+  %b Email:
+  = @fan.email
+%p
+  %b Phone:
+  = @fan.phone
+%p
+  %b Body:
+  = @fan.body
+
+= link_to 'Edit', edit_fan_path(@fan)
+\|
+= link_to 'Back', fans_path

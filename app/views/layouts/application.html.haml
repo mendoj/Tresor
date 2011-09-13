@@ -1,7 +1,8 @@
 %html
   %head
-    = stylesheet_link_tag "screen.css", "tresor.css", "ie.css"
-    %title Tresor
+    = stylesheet_link_tag "screen.css", "tresor.css", "ie.css", 'prettyPhoto.css'
+    = javascript_include_tag 'jquery', 'jquery.prettyPhoto.js'
+    %title TR&Eacute;SOR
   
   %body
     .container.main
@@ -14,20 +15,26 @@
         
         .span-24.last.menu
           .span-2 &nbsp;
-          .span-2= link_to "Home", root_path
+          .span-1= link_to "Home", root_path
+          .span-2= link_to "Jewelry", pages_jewelry_path
           .span-2= link_to "Designers", designers_path
-          .span-4= link_to "Watches and Clocks"
-          .span-3= link_to "Objects of Art"
-          .span-1= link_to "Dan"
-          .span-2= link_to "About Us"
-          .span-2= link_to "News"
-          .span-2= link_to "About Us"
-          .span-2= link_to "Contact", contact_path
+          .span-4= link_to "Watches and Clocks", pages_watches_and_clocks_path
+          .span-3= link_to "Objects of Art", pages_objects_of_art_path
+          .span-3= link_to "Specimens", pages_specimens_path
+          .span-1= link_to "News", news_items_path
+          .span-2= link_to "About Us", pages_about_path
+          .span-2= link_to "Contact", new_fan_path
           .span-2.last &nbsp;
           %hr.menu_underline
         .clear
-        
       .span-24.last.content
+        - if flash[:notice]
+          .span-2 &nbsp;
+          .span-20
+            .stylize.big= flash[:notice]
+          .span-2.last &nbsp;
+          
+          %br
         = yield
       .clear
       
@@ -38,4 +45,7 @@
       .span-24.last
         %br
         %center 
+          = render 'layouts/admin_menu'
+          %br
           %p.stylize Restore the Rainforest!  Replace this footer!
+    = render 'layouts/gallery_footer'

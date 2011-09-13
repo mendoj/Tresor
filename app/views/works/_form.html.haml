@@ -7,15 +7,42 @@
           %li= msg
 
   .field
-    = f.label :designer
-    = f.text_field :designer
+    .stylize.big
+      - if params[:designer_id]
+        - designer = Designer.find_by_id(params[:designer_id])
+      - elsif @work.designer
+        - designer = @work.designer
+      - if designer
+        Designer:
+        .stylize.black.big
+          = designer.first_name + " " + designer.last_name
   .field
-    = f.label :text
+    = f.label "Title"
+    %br
     = f.text_field :text
   .field
-    = f.label :desc
+    = f.label "Description"
+    %br
     = f.text_area :desc
+    
+    .field
+      = f.label "Front Page"
+      %br
+      = f.check_box :front_page
   .field
+    = f.label "Image Attachment"
+    %br
     = f.file_field :image
+    - if params[:designer_id]
+      = f.hidden_field :designer_id, :value => params[:designer_id]
+    -elsif @work.designer
+      = f.hidden_field :designer_id, :value => @work.designer.id
+      
+  .field
+    %br
+    = f.label "Gallery"
+    %br
+    = f.select( "gallery", { "Jewelry" => "jewelry", "Watches and Clocks" => "watches_and_clocks", "Objects of Art" => "objects_of_art", "Specimens" => "speciments"}) 
+  %br
   .actions
     = f.submit 'Save'
