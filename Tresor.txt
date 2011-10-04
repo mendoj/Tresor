@@ -52,3 +52,20 @@ Hover on menu should be golden to match logo
   Can add all content (except designer) types from admin
   News Feed
   Make .stylize font-size larger, including topmenu
+  
+---- 9/13/11
+  Jewelry should be small thumbnails
+    Categories
+      rings
+      pendants and necklaces
+      earrings
+      broaches
+      bracelets
+      antique and estate
+    News:
+      Can post images
+    Lightbox gallery for print
+    Front page slideshow jquery - from work boolean
+    Play with border spacing on brackets
+    
+    
