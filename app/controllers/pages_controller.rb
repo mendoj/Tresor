@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   def index
     @works = Work.where(:front_page => true)
-    @work = @works.first
   end
 
   def watches_and_clocks
@@ -20,7 +19,16 @@ class PagesController < ApplicationController
   end
   
   def jewelry
-    @works = Work.where(:gallery => "jewelry")
+    @jewelry = Work.where(:gallery => "jewelry")
+    @pandn = Work.where(:gallery => "pendants" || "necklaces")
+    
+    @necklaces = Work.where(:gallery => "necklaces")
+    @pendants = Work.where(:gallery => "pendants")
+    @rings = Work.where(:gallery => "rings")
+    @earrings = Work.where(:gallery => "earrings")
+    @bracelets = Work.where(:gallery => "bracelets")
+    @broaches = Work.where(:gallery => "broaches")
+    @aande = []
   end
 
   def contact

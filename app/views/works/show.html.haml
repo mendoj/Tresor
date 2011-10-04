@@ -3,16 +3,22 @@
   - if @work.designer
     .stylize.black.big
       = @work.designer.first_name + " " + @work.designer.last_name
-  %p
-    %b Title:
-    = @work.text
-  %p
-    %b Desc:
+    .stylize.big
+      &nbsp;&nbsp;
+      = @work.text
+  %br
+  .stylize.black
     = @work.desc
-  %p= image_tag @work.image.url, :width => "790px"
+  %br
+  %br
+    
+  = image_tag @work.image.url, :width => "790px"
+  
+  %br
+  %br
 
   = link_to 'Edit', edit_work_path(@work)
   \|
-  = link_to 'Back', works_path
+  = link_to 'Back', :back
 
 .span-2.last &nbsp;

@@ -1,7 +1,16 @@
 %html
   %head
     = stylesheet_link_tag "screen.css", "tresor.css", "ie.css", 'prettyPhoto.css'
-    = javascript_include_tag 'jquery', 'jquery.prettyPhoto.js'
+    = javascript_include_tag 'jquery', 'jquery.prettyPhoto.js', 'http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js'
+    :javascript
+      $(document).ready(function() {
+          $('.slideshow').cycle({
+      		fx: 'fade',
+      		speed: 5000,
+      		timeout: 8000
+      	});
+      });
+      
     %title TR&Eacute;SOR
   
   %body
@@ -37,9 +46,6 @@
           %br
         = yield
       .clear
-      
-      .frame_bottom_left
-      .frame_bottom_right
       
     .container
       .span-24.last

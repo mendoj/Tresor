@@ -58,7 +58,7 @@ body{
 
 .menu{  
   padding-top: 20px;
-  font-size: 0.9em;
+  font-size: 1.0em;
   text-transform: uppercase;
 }
 
@@ -104,7 +104,7 @@ body{
 
 .stylize{
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 1.0em;
   line-height: 2.5em;
   display: inline;
   color: #777;
@@ -130,7 +130,7 @@ body{
 
 .stylize.black{
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 1.00em;
   line-height: 2.5em;
   display: inline;
   color: #000;
@@ -152,4 +152,16 @@ table tr {
 }
 table tr td{
   vertical-align: top;
+}
+
+.jewelry_gallery{
+  margin-left: 30px;
+  background-color: #F0F0F0;
+}
+
+.jewelry_gallery img{
+  width: 110px;
+  height: 110px;
+  border: 5px solid #F0F0F0;
+  float: left;
 }

@@ -1,6 +1,8 @@
 .span-24.last
   %center
-    = image_tag @work.image.url, :width => "790px;", :style => "border: 1px solid black"
+    .slideshow
+      - for work in @works
+        = link_to image_tag(work.image.url, :width => "790px;", :style => "border: 1px solid black"), pages_jewelry_path
 .clear
 
 .span-24.last

@@ -54,8 +54,8 @@ Hover on menu should be golden to match logo
   Make .stylize font-size larger, including topmenu
   
 ---- 9/13/11
-  Jewelry should be small thumbnails
-    Categories
+  *Jewelry should be small thumbnails
+    *Categories
       rings
       pendants and necklaces
       earrings

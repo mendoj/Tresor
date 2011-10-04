@@ -1,22 +1,56 @@
 .span-2 &nbsp;
 .span-20
+  .span-20.last{:style => "padding-left: 100px; margin-top: -15px;"}
+    .stylize{:style => "font-size: 0.9em"}= link_to "Jewelry", "#jewelry"
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    .stylize{:style => "font-size: 0.9em"}= link_to "Pendants and Necklaces", "#pandn"
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    .stylize{:style => "font-size: 0.9em"}= link_to "Earrings", "#earrings"
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    .stylize{:style => "font-size: 0.9em"}= link_to "Broaches", "#broaches"
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    .stylize{:style => "font-size: 0.9em"}= link_to "Bracelets", "#bracelets"
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    .stylize{:style => "font-size: 0.9em"}= link_to "Antiques and Estate", "#aande"
+    &nbsp;&nbsp;&nbsp;&nbsp;
   
-  - for work in @works
+  .span-20.last
+    %a{:name => 'jewelry'}
+    %p.stylize Jewelry
+    .jewelry_gallery
+      - for work in @jewelry
+        = link_to image_tag(work.image.url), work.image.url, :rel => "prettyPhoto", :title => work.desc + "<br/>#{link_to 'More Information', work}"
+  .span-20.last
+    %a{:name => 'pandn'}
+    %p.stylize Pendants and Necklaces
+    .jewelry_gallery
+      - for work in @pandn
+        = link_to image_tag(work.image.url), work.image.url, :rel => "prettyPhoto", :title => work.desc + "<br/>#{link_to 'More Information', work}"
+  .span-20.last
+    %a{:name => 'earrings'}
+    %p.stylize Earrings
+    .jewelry_gallery
+      - for work in @earrings
+        = link_to image_tag(work.image.url), work.image.url, :rel => "prettyPhoto", :title => work.desc + "<br/>#{link_to 'More Information', work}"
+  .span-20.last
+    %a{:name => 'broaches'}
+    %p.stylize Broaches
+    .jewelry_gallery
+      - for work in @broaches
+        = link_to image_tag(work.image.url), work.image.url, :rel => "prettyPhoto", :title => work.desc + "<br/>#{link_to 'More Information', work}"
+  .span-20.last
+    %a{:name => 'bracelets'}
+    %p.stylize Bracelets
+    .jewelry_gallery
+      - for work in @bracelets
+        = link_to image_tag(work.image.url), work.image.url, :rel => "prettyPhoto", :title => work.desc + "<br/>#{link_to 'More Information', work}"
+  .span-20.last
+    %a{:name => 'aande'}
+    %p.stylize Antiques and Estate
+    .jewelry_gallery
+      - for work in @aande
+        = link_to image_tag(work.image.url), work.image.url, :rel => "prettyPhoto", :title => work.desc + "<br/>#{link_to 'More Information', work}"
   
-    .span-10
-      = link_to image_tag(work.image.url, :width => "350px", :style => "border: 1px solid #000;"), work.image.url, :rel => "prettyPhoto", :title => work.desc
-    .span-10.last
-      %strong.stylize.big= work.text
-      - if work.designer
-        .stylize.black.big= work.designer.first_name + " " + work.designer.last_name
-      - else
-        .stylize.black.big tr&Eacute;sor
-      %br
-      %p= work.desc
-      %br
-      .stylize= link_to "Request more information", contact_path
-    .clear
-    %br
   
 .span-2.last &nbsp;
 
