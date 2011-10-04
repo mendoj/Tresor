@@ -18,6 +18,11 @@ class PagesController < ApplicationController
   def about
   end
   
+  def mailing_list
+    @fans = Fan.all
+    
+  end
+  
   def jewelry
     @jewelry = Work.where(:gallery => "jewelry")
     @pandn = Work.where(:gallery => "pendants" || "necklaces")

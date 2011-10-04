@@ -1,0 +1,26 @@
+.span-2 &nbsp;
+
+.span-10
+  .stylize.black.big Mailing List Subscribers
+  %br
+  - for fan in @fans
+    = fan.email
+    %br
+    
+.span-10
+  .stylize.black.big Compose New Message
+  %br
+  - mli = MailingListItem.new
+  = form_for mli do |f|
+    .stylize Subject:
+    %br
+    = f.text_field :subject
+    %br
+    %br
+    .stylize Body:
+    %br
+    = f.text_area :body
+    %br
+    = f.submit "Send to Mailing List"
+  
+.span-2.last &nbsp;

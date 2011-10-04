@@ -1,7 +1,7 @@
 Edge::Application.routes.draw do
   
   resources :news_items
-
+  resources :mailing_list_items
   resources :fans
   resources :works
   resources :designers
@@ -13,6 +13,7 @@ Edge::Application.routes.draw do
   get "pages/about"
   get "pages/jewelry"
   get "pages/objects_of_art"
+  get "pages/mailing_list"
 
   match "contact" => "fans#new"
   match "watches" => "pages#watches_and_clocks"
