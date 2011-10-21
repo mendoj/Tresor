@@ -20,11 +20,6 @@
       .works
         - for work in designer.works
           = link_to image_tag(work.image.url, :class => "work_image"), work.image.url, :rel => "prettyPhoto", :title => work.desc
-        - if designer.works.count < 1
-          = image_tag 'jewelry.png', :class => "work_image"
-          = image_tag 'jewelry.png', :class => "work_image"
-          = image_tag 'jewelry.png', :class => "work_image"
-          = image_tag 'jewelry.png', :class => "work_image"
         %br
       .stylize
         = link_to "see More from this designer", designer
