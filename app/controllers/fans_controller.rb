@@ -76,4 +76,25 @@ class FansController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  def vip_fan
+    fan = Fan.find_by_id(params[:fan_id])
+    fan.vip = true
+    if fan.save
+      redirect_to :back
+    else
+      redirect_to :back, :notice => "Unable to VIP fan."
+    end
+  end
+  
+  def unvip_fan
+    fan = Fan.find_by_id(params[:fan_id])
+    fan.vip = false
+    if fan.save
+      redirect_to :back
+    else
+      redirect_to :back, :notice => "Unable to un-VIP fan."
+    end
+  end
+  
 end

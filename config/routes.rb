@@ -14,6 +14,9 @@ Edge::Application.routes.draw do
   get "pages/jewelry"
   get "pages/objects_of_art"
   get "pages/mailing_list"
+  
+  post "fans/vip_fan"
+  post "fans/unvip_fan"
 
   match "contact" => "fans#new"
   match "watches" => "pages#watches_and_clocks"

@@ -17,5 +17,6 @@ end
 #  body       :text
 #  created_at :datetime
 #  updated_at :datetime
+#  vip        :boolean         default(FALSE)
 #
 

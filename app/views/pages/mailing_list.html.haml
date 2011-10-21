@@ -3,9 +3,21 @@
 .span-10
   .stylize.black.big Mailing List Subscribers
   %br
-  - for fan in @fans
-    = fan.email
-    %br
+  %table 
+    - for fan in @fans
+      %tr
+        %td
+          = fan.email
+        %td
+          - if fan.vip?
+            %strong VIP
+          - else
+            &nbsp;
+        %td
+          - if fan.vip?
+            = button_to "un-VIP", :controller => :fans, :action => :unvip_fan, :fan_id => fan.id
+          - else
+            = button_to "VIP", :controller => :fans, :action => :vip_fan, :fan_id => fan.id
     
 .span-10
   .stylize.black.big Compose New Message
@@ -14,13 +26,17 @@
   = form_for mli do |f|
     .stylize Subject:
     %br
-    = f.text_field :subject
+    = f.text_field :subject, :style => "width: 400px; font-size: 1.2em"
     %br
     %br
     .stylize Body:
     %br
-    = f.text_area :body
+    = f.text_area :body, :style => "width: 400px; font-size: 1.2em"
     %br
-    = f.submit "Send to Mailing List"
-  
+    .span-9
+      Send to VIP Members only?
+      = f.check_box :vip
+    .span-1.last
+      = f.submit "Send"
+
 .span-2.last &nbsp;
