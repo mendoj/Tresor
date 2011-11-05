@@ -20,20 +20,23 @@ class PagesController < ApplicationController
   
   def mailing_list
     @fans = Fan.all
-    
+  end
+  
+  def inquiry
+    @fan = Fan.new
   end
   
   def jewelry
     @jewelry = Work.where(:gallery => "jewelry")
-    @pandn = Work.where(:gallery => "pendants" || "necklaces")
     
+    @pandn = Work.where(:gallery => "pendants" || "necklaces")
     @necklaces = Work.where(:gallery => "necklaces")
     @pendants = Work.where(:gallery => "pendants")
     @rings = Work.where(:gallery => "rings")
     @earrings = Work.where(:gallery => "earrings")
     @bracelets = Work.where(:gallery => "bracelets")
     @broaches = Work.where(:gallery => "broaches")
-    @aande = []
+    @aande = Work.where(:gallery => "aande")
   end
 
   def contact

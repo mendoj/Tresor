@@ -54,17 +54,22 @@ body{
   position: absolute;
   top: 40px;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .menu{  
   padding-top: 20px;
   font-size: 1.0em;
   text-transform: uppercase;
+  text-align: center;
+  color: #777;
+  display: inline;
 }
 
 .menu a {
   text-decoration: none;
   color: #777;
+  display: inline;
 }
 
 .menu a:hover {
@@ -72,8 +77,13 @@ body{
   color: #333;
 }
 
+.menu a.active {
+  color: black;
+}
+
 .menu_underline{
   width: 830px;
+  margin-top: 1px;
 }
 
 .logo{

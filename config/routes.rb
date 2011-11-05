@@ -1,5 +1,7 @@
 Edge::Application.routes.draw do
   
+  devise_for :users
+
   resources :news_items
   resources :mailing_list_items
   resources :fans
@@ -14,6 +16,7 @@ Edge::Application.routes.draw do
   get "pages/jewelry"
   get "pages/objects_of_art"
   get "pages/mailing_list"
+  get "pages/inquiry"
   
   post "fans/vip_fan"
   post "fans/unvip_fan"

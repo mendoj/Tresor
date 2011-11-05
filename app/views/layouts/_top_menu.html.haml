@@ -1,0 +1,67 @@
+- if params[:controller] == "pages" && params[:action] == "index"
+  = link_to "Home", root_path, :class => "active"
+- else 
+  = link_to "Home", root_path
+
+&nbsp;&nbsp;
+
+- if params[:controller] == "pages" && params[:action] == "jewelry"
+  = link_to "Jewelry", pages_jewelry_path, :class => "active"
+- else
+  = link_to "Jewelry", pages_jewelry_path
+  
+&nbsp;&nbsp;
+  
+- if params[:controller] == "designers" && params[:action] == "index"
+  = link_to "Fine Art", designers_path, :class => "active"
+- else
+  = link_to "Fine Art", designers_path
+  
+&nbsp;&nbsp;
+  
+- if params[:controller] == "designers" && params[:action] == "index"
+  = link_to "Designers", designers_path, :class => "active"
+- else
+  = link_to "Designers", designers_path
+  
+&nbsp;&nbsp;
+  
+- if params[:controller] == "pages" && params[:action] == "watches_and_clocks"
+  = link_to "Watches & Clocks", pages_watches_and_clocks_path, :class => "active"
+- else
+  = link_to "Watches & Clocks", pages_watches_and_clocks_path
+  
+&nbsp;&nbsp;
+
+- if params[:controller] == "pages" && params[:action] == "objects_of_art"
+  = link_to "Objects of Art", pages_objects_of_art_path, :class => "active"
+- else
+  = link_to "Objects of Art", pages_objects_of_art_path
+  
+&nbsp;&nbsp;
+
+- if params[:controller] == "pages" && params[:action] == "specimens"
+  = link_to "Specimens", pages_specimens_path, :class => "active"
+- else
+  = link_to "Specimens", pages_specimens_path
+  
+&nbsp;&nbsp;
+  
+- if params[:controller] == "news_items" && params[:action] == "index"
+  = link_to "News", news_items_path, :class => "active"
+- else
+  = link_to "News", news_items_path
+  
+&nbsp;&nbsp;
+
+- if params[:controller] == "pages" && params[:action] == "about"
+  = link_to "About", pages_about_path, :class => "active"
+- else
+  = link_to "About", pages_about_path
+  
+&nbsp;&nbsp;
+
+- if params[:controller] == "fans" && params[:action] == "new"
+  = link_to "Contact", new_fan_path, :class => "active"
+- else
+  = link_to "Contact", new_fan_path

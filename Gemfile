@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails'
+gem 'devise'
 
 group :production do
   gem 'pg'

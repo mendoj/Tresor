@@ -2,7 +2,7 @@
 
 .span-20
 
-  %h1 Listing works
+  %h1 All Works
 
   %table
     %tr
@@ -26,11 +26,10 @@
         %td= work.desc
         %td= link_to 'View', work
         %td= link_to 'Edit', edit_work_path(work)
-        %td= link_to 'Destroy', work, :confirm => 'Are you sure?', :method => :delete
+        %td= button_to 'x', work, :confirm => 'Are you sure?', :method => :delete
 
   %br
 
-  = link_to 'New Work', new_work_path
-
+  = link_to 'Add Work', new_work_path
 
 .span-2.last &nbsp;

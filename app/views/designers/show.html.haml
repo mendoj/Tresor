@@ -11,7 +11,10 @@
     
     %br
     %br
-    = link_to "Edit this Designer", edit_designer_path(@designer)
+    - if current_user
+      = link_to "Edit this Designer", edit_designer_path(@designer)
+      &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      = link_to "Add work", :controller => :works, :action => :new, :designer_id => @designer.id
   .span-2.last &nbsp;
   
   

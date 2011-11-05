@@ -1,0 +1,47 @@
+.span-2 &nbsp;
+.span-10
+  .stylize.black.big Work Inquiry:
+  = form_for @fan do |f|
+    -if @fan.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@fan.errors.count, "error")} prohibited this fan from being saved:"
+        %ul
+          - @fan.errors.full_messages.each do |msg|
+            %li= msg
+
+    .field.stylize
+      = f.label "Your name:"
+      %br
+      = f.text_field :name, :style => "width: 300px; font-size: 1.5em"
+      %br
+    .field.stylize
+      = f.label "Email address:"
+      %br
+      = f.text_field :email, :style => "width: 300px; font-size: 1.5em"
+      %br
+    .field.stylize
+      = f.label "Best number to contact you at:"
+      %br
+      = f.text_field :phone, :style => "width: 300px; font-size: 1.5em"
+      %br
+    .field.stylize
+      = f.label "Additional Information?"
+      %br
+      = f.text_area :body, :style => "width: 300px; font-size: 1.5em"
+      %br
+    .field.stylize
+      = f.submit 'Send'
+  
+.span-10
+  %br
+  %br
+  .stylize.black 
+    You were wondering about
+
+  %br
+  %br
+  %br
+  %br
+    
+.span-2.last &nbsp;
+
