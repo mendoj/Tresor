@@ -31,12 +31,25 @@
       %br
     .field.stylize
       = f.submit 'Send'
+  %br
+  %br
+  %br
   
 .span-10
   %br
   %br
-  .stylize.black 
+  .stylize
     You were wondering about
+    .stylize.black= @work.text
+    = image_tag @work.image.url, :width => "400px"
+    - if @work.designer
+      %br
+      by
+      .stylize.black= @work.designer.first_name + " " + @work.designer.last_name
+  - content = Content.find_by_context("inquiry")
+  %br
+  %br
+  %p= content.body
 
   %br
   %br

@@ -23,6 +23,7 @@ class PagesController < ApplicationController
   end
   
   def inquiry
+    @work = Work.find_by_id(params[:id])
     @fan = Fan.new
   end
   

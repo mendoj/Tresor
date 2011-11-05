@@ -93,6 +93,6 @@ Hover on menu should be golden to match logo
   * Destroy on inventory not working
   * Be able to remove designers
   * Edit works from designer page
-  Piece inquiry form
-  Search form - think about it
+  * Piece inquiry form
+  * Search form - think about it
       
