@@ -1,5 +1,5 @@
 class Fan < ActiveRecord::Base
-  validates_presence_of :email
+  validates_presence_of :email, :body
   
 end
 

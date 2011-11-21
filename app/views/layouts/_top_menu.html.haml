@@ -12,10 +12,10 @@
   
 &nbsp;&nbsp;
   
-- if params[:controller] == "designers" && params[:action] == "index"
-  = link_to "Fine Art", designers_path, :class => "active"
+- if params[:controller] == "pages" && params[:action] == "fine_art"
+  = link_to "Fine Art", fine_art_path, :class => "active"
 - else
-  = link_to "Fine Art", designers_path
+  = link_to "Fine Art", fine_art_path
   
 &nbsp;&nbsp;
   

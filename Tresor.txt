@@ -81,10 +81,10 @@ Hover on menu should be golden to match logo
   
 ---- 10/21/2011
   * Shorten sign-in
-  Push to heroku
-  Set up DNS
+  * Push to heroku
+  * Set up DNS
   * Add topmenu item "fine art"
-  Delete users
+  * Delete users
   * validate email addresses
   * Slow timing between fades on front page
   * Front page images should be links to the work
@@ -95,4 +95,13 @@ Hover on menu should be golden to match logo
   * Edit works from designer page
   * Piece inquiry form
   * Search form - think about it
+
+
+---- 11/5/2011
+  VR in inquire about work on work#show
+  Richtext editor for news and CMS
+  Footer text from J
+  Batch hide items with ability to return to inventory
+
+  1470 East Valley Road, Studio V
       

@@ -7,6 +7,10 @@
   %br
   = link_to image_tag('map.png', :width => "400px"), "http://maps.google.com/maps?q=520+San+Ysidro+Road,+Montecito,+CA&hl=en&ll=34.434098,-119.631758&spn=0.047855,0.072613&sll=34.437516,-119.632081&sspn=0.001504,0.002269&vpsrc=6&hnear=520+San+Ysidro+Rd,+Montecito,+California+93108&t=m&z=14", :target => "blank"
   %br
+  .stylize.black
+    1470 East Valley Road Suite V 
+  .stylize
+    Montecito CA, 93108
   %br
   .stylize.big
     We can also be contacted by:
@@ -14,12 +18,7 @@
   .stylize
     Telephone:
   .stylize.black
-    (805) 555- 1011
-  %br
-  .stylize
-    Fax:
-  .stylize.black
-    (805) 555- 1011
+    (805) 969 0888
   
   %br
   %br
@@ -28,7 +27,7 @@
     %br
   = form_for @fan do |f|
     = f.text_field :email, :style => "width: 300px; font-size: 1.5em"
-    %br
+    = f.hidden_field :body, :value => "Joined your mailing list!"
     = f.submit "Join"
     
 .span-2.last &nbsp;

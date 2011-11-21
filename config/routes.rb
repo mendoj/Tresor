@@ -17,7 +17,8 @@ Edge::Application.routes.draw do
   get "pages/objects_of_art"
   get "pages/mailing_list"
   get "pages/inquiry"
-  
+  get "pages/fine_art"
+
   post "fans/vip_fan"
   post "fans/unvip_fan"
 
@@ -28,6 +29,7 @@ Edge::Application.routes.draw do
   match "about" => "pages#about"
   match "jewelry" => "pages#jewelry"
   match "art" => "pages#objects_of_art"
+  match "fine_art" => "pages#fine_art"
   
 
   root :to => 'pages#index'

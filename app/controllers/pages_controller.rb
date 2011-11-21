@@ -14,6 +14,10 @@ class PagesController < ApplicationController
   def objects_of_art
     @works = Work.where(:gallery => "objects_of_art")
   end
+  
+  def fine_art
+    @works = Work.where(:gallery => "fine_art")
+  end
 
   def about
   end

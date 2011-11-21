@@ -17,9 +17,11 @@
   %br
   %br
   = link_to "Inquire about this peice", :controller => :pages, :action => :inquiry, :id => @work.id
-
-  = link_to 'Edit', edit_work_path(@work)
   \|
+
+  - if current_user
+    = link_to 'Edit', edit_work_path(@work)
+    \|
   = link_to 'Back', :back
 
 .span-2.last &nbsp;
