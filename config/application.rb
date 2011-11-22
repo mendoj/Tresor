@@ -39,5 +39,8 @@ module Edge
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    
+    # For CK Editor
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end

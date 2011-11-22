@@ -12,6 +12,7 @@ group :development do
 end
 
 gem 'paperclip'
+gem 'ckeditor'
 gem 'haml-rails'
 gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
 
