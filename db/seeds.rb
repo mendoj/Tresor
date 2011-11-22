@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Content.create(context: 'index_left')
+Content.create(context: 'index_middle')
+Content.create(context: 'index_right')
+Content.create(context: 'about_us')
+Content.create(context: 'inquiry')
+puts "Created blank pages."
