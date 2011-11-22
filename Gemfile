@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails'
 gem 'devise'
+gem 'therubyracer'
 
 group :production do
   gem 'pg'
