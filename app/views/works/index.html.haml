@@ -23,7 +23,7 @@
           - elsif work.gallery
             = work.gallery.capitalize
         %td= work.text
-        %td= work.desc
+        %td= work.desc.html_safe
         %td= link_to 'View', work
         %td= link_to 'Edit', edit_work_path(work)
         %td= button_to 'x', work, :confirm => 'Are you sure?', :method => :delete

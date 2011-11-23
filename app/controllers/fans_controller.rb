@@ -43,7 +43,7 @@ class FansController < ApplicationController
     @fan = Fan.new(params[:fan])
     
     if @fan.save
-      redirect_to :back, :notice => "Thank you.  We will contact you shortly."
+      redirect_to :back, :notice => "Thank you."
     else
       redirect_to :back, :notice => "Please include your email address."
     end

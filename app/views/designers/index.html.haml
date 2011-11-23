@@ -20,7 +20,7 @@
       %br
       .works
         - for work in designer.works
-          = link_to image_tag(work.image.url, :class => "work_image"), work.image.url, :rel => "prettyPhoto", :title => work.desc
+          = link_to image_tag(work.image.url, :class => "work_image"), work.image.url, :rel => "prettyPhoto", :title => work.desc.html_safe
         %br
       .stylize
         = link_to "see More from this designer", designer

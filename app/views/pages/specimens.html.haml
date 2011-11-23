@@ -4,7 +4,7 @@
   - for work in @works
   
     .span-10
-      = link_to image_tag(work.image.url, :width => "350px", :style => "border: 1px solid #000;"), work.image.url, :rel => "prettyPhoto", :title => work.desc
+      = link_to image_tag(work.image.url, :width => "350px", :style => "border: 1px solid #000;"), work.image.url, :rel => "prettyPhoto", :title => work.desc.html_safe
     .span-10.last
       %strong.stylize.big= work.text
       - if work.designer
@@ -12,9 +12,9 @@
       - else
         .stylize.black.big tr&Eacute;sor
       %br
-      %p= work.desc
+      %p= work.desc.html_safe
       %br
-      .stylize= link_to "Request more information", contact_path
+      .stylize= link_to "Inquire about this peice", :controller => :pages, :action => :inquiry, :id => work.id
     .clear
     %br
   
